@@ -1,0 +1,567 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+/* Start Global reules  */
+
+ul {
+  list-style: none;
+}
+
+a,
+a:visited {
+  color: white;
+}
+
+.Container {
+  width: 98%;
+  margin: 0 auto;
+}
+
+:root {
+  --MainColor: rgb(35, 116, 225);
+  --Color: #fff;
+  --BackColor: rgb(36, 37, 38);
+  --LightBlack: rgb(166, 168, 174);
+  --BackMain: rgb(24, 25, 26);
+}
+
+/* :root {
+  --MainColor: rgb(35, 116, 225);
+  --Color: #000;
+  --BackColor: rgb(219, 225, 231);
+  --LightBlack: rgb(230, 224, 224);
+  --BackMain: rgb(255, 255, 255);
+} */
+
+/* End Global reules  */
+
+/* Start Header  */
+header {
+  height: 65px;
+  width: 100%;
+  background-color: var(--BackColor);
+}
+
+header .Container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .Container > div {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .Container .Logo_Search {
+  flex-basis: 21%;
+}
+
+header .Container .Logo_Search .Logo {
+  width: 70px;
+}
+
+header .Container .Logo_Search .Search_bar {
+  width: 230px;
+  height: 70%;
+  background-color: rgb(58, 59, 60);
+  color: var(--LightBlack);
+  margin: auto 0;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+header .Container .Logo_Search .Search_bar i {
+  font-size: 14px;
+}
+
+header .Container .Logo_Search .Search_bar input {
+  width: 80%;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: var(--Color);
+}
+
+header .Container .News {
+  flex-basis: 45%;
+}
+
+header .Container .News ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .Container .News ul li {
+  width: 15%;
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 20px;
+  color: var(--LightBlack);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+header .Container .News ul li:not(:first-child):hover {
+  background-color: rgba(167, 167, 167, 0.24);
+}
+
+header .Container .News ul li.active {
+  color: var(--MainColor);
+  position: relative;
+}
+
+header .Container .News ul li.active::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: var(--MainColor);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+header .Container .Icons {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .Container .Icons .User {
+  width: 130px;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: 0.4s;
+}
+
+header .Container .Icons .User:hover {
+  background-color: rgba(167, 167, 167, 0.24);
+}
+
+header .Container .Icons .User img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+header .Container .Icons .User p {
+  width: 90px;
+  text-transform: capitalize;
+  color: var(--Color);
+  text-align: center;
+}
+
+header .Container .Icons ul {
+  width: calc(100% - 140px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .Container .Icons ul li {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background-color: rgb(58, 59, 60);
+  border-radius: 50%;
+  display: flex;
+  color: rgb(185, 187, 191);
+  cursor: pointer;
+}
+
+header .Container .Icons ul li i {
+  margin: auto;
+}
+
+/* End Header  */
+/* Start main  */
+Main {
+  background-color: var(--BackMain);
+}
+
+main .Container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+Main aside {
+  height: calc(100vh - 75px);
+  width: 25%;
+  padding-top: 10px;
+  color: var(--Color);
+}
+
+Main aside .User {
+  width: 200px;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: 0.4s;
+}
+
+Main aside .User img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+Main aside .User p {
+  width: 150px;
+  text-transform: capitalize;
+  color: var(--Color);
+  font-weight: bold;
+}
+
+main nav {
+  height: calc(100vh - 65px);
+  width: 25%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main nav > div {
+  width: 98%;
+  margin: 0 auto;
+}
+
+main nav .Sponsors {
+  height: 50%;
+  border-bottom: solid 1px rgb(143, 143, 143);
+}
+
+main nav .Sponsors > div {
+  margin-bottom: 15px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main nav .Sponsors > div img {
+  height: 100%;
+  width: 50%;
+}
+
+main nav .Sponsors > div > div {
+  width: 45%;
+}
+
+main nav .Freind {
+  height: 25%;
+  border-bottom: solid 1px rgb(143, 143, 143);
+}
+
+main nav .Freind h3 {
+  margin-top: 0;
+}
+
+main nav .Freind h3 span {
+  margin-left: 150px;
+}
+
+main nav .Freind h3 span i {
+  margin-right: 14px;
+  color: var(--LightBlack);
+}
+
+Main nav .Freind .User {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: 0.4s;
+}
+
+Main nav .Freind .User img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+Main nav .Freind .User p {
+  width: 150px;
+  text-transform: capitalize;
+  color: var(--Color);
+  font-weight: bold;
+}
+
+main nav .Groups {
+  height: 20%;
+}
+
+main nav .Groups h3 {
+  margin-top: 0;
+}
+
+main nav .Groups p {
+  font-size: 17px;
+}
+
+main nav .Groups p i {
+  margin-right: 5px;
+  background-color: var(--LightBlack);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+main .Pub {
+  height: calc(100vh - 75px);
+  padding-top: 10px;
+  width: 45%;
+  overflow: auto;
+  color: #fff;
+}
+
+main .Pub::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--BackColor);
+}
+
+main .Pub::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(166, 168, 174, 0.322);
+  transition: 0.4s;
+}
+
+main .Pub::-webkit-scrollbar-thumb:hover  {
+  background-color: var(--LightBlack);
+}
+
+main .Pub .Story {
+  height: 140px;
+  width: 90% ;
+  margin: 20px auto;
+  border-radius: 8px;
+  background-color: var(--BackColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .Pub .Story .Img_inp {
+  height: 48%;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main .Pub .Story .Img_inp::after {
+  content: "";
+  height: 1px;
+  width: 95%;
+  background-color: var(--LightBlack);
+  position: absolute;
+  bottom: 0;
+  left: 2.5%;
+}
+
+main .Pub .Story .Img_inp img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+main .Pub .Story .Img_inp input {
+  height: 65%;
+  width: 80%;
+  outline: none;
+  border: none;
+  background: rgb(58, 59, 60);
+  color: white;
+  border-radius: 20px;
+  padding-left: 10px;
+  font-size: 17px;
+}
+
+main .Pub .Story .Emojis {
+  height: 48%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main .Pub .Story .Emojis > div {
+  width: 30%;
+  height: 100%;
+}
+
+main .Pub .Story .Emojis p {
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+}
+
+main .Pub .Story .Emojis p i {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+main .Pub .Story .Emojis p .fa-video {
+  color: red;
+}
+
+main .Pub .Story .Emojis p .fa-images {
+  color: green;
+}
+
+main .Pub .Story .Emojis p .fa-laugh-wink {
+  color: rgb(247, 185, 40);
+}
+
+main .Pub .Publication {
+  height: 550px;
+  width: 90%;
+  margin: 15px auto;
+  background-color: var(--BackColor);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .Pub .Publication > div {
+  width: 100%;
+}
+
+main .Pub .Publication .Text {
+  height: 23%;
+}
+
+main .Pub .Publication .Text .Profile {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .Pub .Publication .Text .Profile > div {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main .Pub .Publication .Text .Profile > div img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+main .Pub .Publication .Text .Profile > div h4 {
+  margin: 0;
+}
+
+main .Pub .Publication .Text .Profile > div h4 i {
+  font-size: 16px;
+  color: var(--MainColor);
+  margin-left: 5px;
+}
+
+main .Pub .Publication .Text .Profile > div p {
+  margin: 0;
+}
+
+main .Pub .Publication .Text .Profile i {
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+main .Pub .Publication .Text .Write p {
+  padding-left: 10px;
+  margin: 0;
+  font-weight: normal;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.4;
+}
+
+main .Pub .Publication .Image {
+  height: 60%;
+}
+
+main .Pub .Publication .Image img {
+  height: 100%;
+  width: 100%;
+}
+
+main .Pub .Publication .Feed {
+  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+main .Pub .Publication .Feed::after {
+  content: "";
+  height: 1px;
+  width: 95%;
+  background-color: rgb(192, 192, 192);
+  position: absolute;
+  left: 2.5%;
+  bottom: 0;
+}
+
+main .Pub .Publication .Feed p {
+  margin: 0 8px;
+  display: flex;
+}
+
+main .Pub .Publication .Feed p img {
+  margin: auto  2px;
+  width: 20px;
+}
+
+main .Pub .Publication .Like {
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .Pub .Publication .Like > div {
+  width: 33.33%;
+  height: 100%;
+  display: flex;
+}
+
+main .Pub .Publication .Like > div p {
+  margin: auto;
+  font-weight: bold;
+}
+
+main .Pub .Publication .Like > div p i {
+  margin-right: 5px;
+  color: var(--LightBlack);
+}
+
+/* End Main  */
+
